@@ -9,4 +9,6 @@ This project is a specialized environment designed for text transformation, conv
 - **Output Integrity:** Ensure the `output/` directory exists before writing any artifacts.
 - **Naming:** Use descriptive names for generated files to maintain clarity.
 - **Consistency:** Adhere to established formatting and engineering rules provided by the specialized skills.
+- **Atomic Commits:** Prefer small, atomic commits that represent a single logical change. Avoid "squashing" unrelated changes into a single commit.
+- **Push Safety:** The AI Agent MUST ask for explicit confirmation before pushing any changes to the `main` branch.
 - **Clarification:** If any instruction or requirement is unclear, you MUST ask the user for clarification every time before proceeding. Do not make assumptions.
