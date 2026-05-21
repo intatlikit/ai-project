@@ -10,5 +10,5 @@ This project is a specialized environment designed for text transformation, conv
 - **Naming:** Use descriptive names for generated files to maintain clarity.
 - **Consistency:** Adhere to established formatting and engineering rules provided by the specialized skills.
 - **Atomic Commits:** Prefer small, atomic commits that represent a single logical change. Avoid "squashing" unrelated changes into a single commit.
-- **Push Safety:** The AI Agent MUST ask for explicit confirmation before pushing any changes to the `main` branch.
+- **Push Safety:** The AI Agent MUST NEVER push to the `main` branch unless the user explicitly issues a command to do so (e.g., "push to main"). The agent should wait for this command rather than proactively asking for it after every commit.
 - **Clarification:** If any instruction or requirement is unclear, you MUST ask the user for clarification every time before proceeding. Do not make assumptions.
