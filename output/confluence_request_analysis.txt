@@ -1,0 +1,48 @@
+API Analysis: POST - /vb/v1/bff-mobile-e-statement/v1/loan/transaction/update/spending-category - v1
+
+Description:
+This API updates the spending category for a lending transaction.
+
+Request Body Structure:
+- headerReq (Object, Mandatory): Standard header fields.
+    - reqChannel (String, Mandatory)
+    - reqDtm (String, Mandatory)
+    - reqBy (String, Mandatory)
+    - reqID (String, Mandatory)
+    - correlationID (String, Mandatory)
+    - ip (String, Mandatory)
+    - appVersion (String, Mandatory)
+    - authorization (String, Mandatory)
+- content (Object, Mandatory): Main payload.
+    - accountNo (String, Mandatory): The loan account number.
+    - transactionRefID (String, Mandatory): Reference ID of the transaction.
+    - spendingCategoryCode (String, Mandatory): The category code (can be an empty string).
+
+Sample Request:
+{
+    "headerReq": {
+        "reqChannel": "VB_IOS",
+        "reqDtm": "2025-01-25T12:34:56Z",
+        "reqBy": "0888734452",
+        "reqID": "1750839c-c000-4df2-b5cf-8cdde7c5273f",
+        "correlationID": "cc3e8e48-2595-40a5-a5b9-0e49f6128cb9",
+        "ip": "127.0.0.1",
+        "appVersion": "1.0.0",
+        "authorization": "..."
+    },
+    "content": {
+        "accountNo": "510000002074",
+        "transactionRefID": "sc3e8e48-2595-40a5-a5b9-0e49f6128cb9",
+        "spendingCategoryCode": "001"
+    }
+}
+
+Response Body Structure:
+- headerResp (Object, Mandatory)
+    - statusCd (String, Mandatory)
+    - statusDesc (String, Mandatory)
+
+Status Codes:
+- 0000: Success
+- 0001: Bad request (mandatory fields missing or invalid format)
+- 9999: Internal server error

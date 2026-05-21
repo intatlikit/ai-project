@@ -1,0 +1,29 @@
+import com.google.gson.annotations.SerializedName
+
+data class Root(
+    @SerializedName("headerReq") val headerReq: HeaderReq? = null,
+    @SerializedName("content") val content: Content? = null
+)
+
+data class HeaderReq(
+    @SerializedName("reqChannel") val reqChannel: String? = null,
+    @SerializedName("reqDtm") val reqDtm: String? = null,
+    @SerializedName("reqBy") val reqBy: String? = null,
+    @SerializedName("reqID") val reqID: String? = null,
+    @SerializedName("correlationID") val correlationID: String? = null,
+    @SerializedName("ip") val ip: String? = null,
+    @SerializedName("appVersion") val appVersion: String? = null,
+    @SerializedName("authorization") val authorization: String? = null
+)
+
+data class Content(
+    @SerializedName("accountNo") val accountNo: String? = null,
+    @SerializedName("transactionRefID") val transactionRefID: String? = null,
+    @SerializedName("spendingCategoryCode") val spendingCategoryCode: String? = null
+)
+
+// Notes for the user:
+// - Add the Gson dependency to build.gradle if not already present:
+//   implementation 'com.google.code.gson:gson:2.10.1'
+// - Rename classes to match your domain naming conventions.
+// - Consider using @Parcelize + Parcelable if passing objects between Android components.
