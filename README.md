@@ -54,3 +54,4 @@ It will guide you to select the commit type (e.g., `feat`, `fix`, `docs`, `refac
 * **Output Integrity:** All generated files (code, analysis, transformations) must be saved inside the `output/` directory.
 * **Agent Operations:** The AI Agent references instructions in `GEMINI.md` to adhere to formatting and naming standards.
 
+<!-- push script test comment -->
