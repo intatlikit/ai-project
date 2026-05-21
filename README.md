@@ -14,6 +14,8 @@ Welcome to the **AI Agent Project** workspace! This is a specialized environment
 
 ```
 ├── .gemini/               # Local workspace settings and agent instructions (gitignored)
+├── bin/                   # Utility and pipeline scripts
+│   └── push-to-main.sh    # Interactive Git push automation script
 ├── output/                # Directory containing all generated artifacts
 │   ├── confluence_request_analysis.txt  # Parsed API documentation structure
 │   ├── dataclass.kt                     # Generated Kotlin data classes for JSON responses
@@ -22,6 +24,20 @@ Welcome to the **AI Agent Project** workspace! This is a specialized environment
 ├── README.md              # Main project documentation (this file)
 └── .gitignore             # Configured Git ignore rules
 ```
+
+---
+
+## 🚀 Quick Git Push Pipeline
+
+We've set up an interactive CLI script to automate staging, writing conventional commits, and pushing changes straight to `origin/main`. 
+
+To run it, simply execute:
+```bash
+./bin/push-to-main.sh
+```
+
+It will guide you to select the commit type (e.g., `feat`, `fix`, `docs`, `refactor`) and enter the description.
+
 
 ---
 
