@@ -1,8 +1,8 @@
 {
   "mcpServers": {
     "atlassian": {
-      "url": "https://mcp.atlassian.com/v1/sse",
-      "type": "sse"
+      "url": "https://mcp.atlassian.com/v1/mcp",
+      "authProviderType": "dynamic_discovery"
     }
   }
 }
